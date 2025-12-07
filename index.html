@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MedPet - Cuidados com seu Pet</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #4a5568;
+            background: linear-gradient(135deg, #ffd1dc 0%, #e0c3fc 50%, #c3e0fc 100%);
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+        }
+
+        .container {
+            background: white;
+            max-width: 900px;
+            width: 100%;
+            border-radius: 30px;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.15);
+            overflow: hidden;
+        }
+
+        .header {
+            background: linear-gradient(135deg, #ffc3d4 0%, #d4b5fc 100%);
+            color: #5a4570;
+            padding: 60px 40px;
+            text-align: center;
+        }
+
+        .header h1 {
+            font-size: 2.8em;
+            margin-bottom: 10px;
+            font-weight: 700;
+        }
+
+        .header .emoji {
+            font-size: 3em;
+            margin-bottom: 15px;
+        }
+
+        .header p {
+            font-size: 1.3em;
+            opacity: 0.9;
+            font-weight: 500;
+        }
+
+        .content {
+            padding: 50px 40px;
+        }
+
+        .section {
+            margin-bottom: 40px;
+        }
+
+        .section h2 {
+            color: #b794f6;
+            font-size: 1.8em;
+            margin-bottom: 20px;
+            border-bottom: 3px solid #ffc3d4;
+            padding-bottom: 10px;
+        }
+
+        .section p {
+            font-size: 1.15em;
+            color: #4a5568;
+            margin-bottom: 15px;
+            line-height: 1.8;
+        }
+
+        .features {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 25px;
+            margin-top: 30px;
+        }
+
+        .feature-card {
+            background: linear-gradient(135deg, #fff9f0 0%, #fef5ff 100%);
+            padding: 30px;
+            border-radius: 20px;
+            border: 2px solid #ffc3d4;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            text-align: center;
+        }
+
+        .feature-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 15px 35px rgba(255, 195, 212, 0.3);
+        }
+
+        .feature-card .icon {
+            font-size: 3em;
+            margin-bottom: 15px;
+        }
+
+        .feature-card h3 {
+            color: #9f7aea;
+            margin-bottom: 12px;
+            font-size: 1.4em;
+        }
+
+        .feature-card p {
+            font-size: 1em;
+            color: #5a5a5a;
+        }
+
+        .cta-section {
+            background: linear-gradient(135deg, #e0f5ff 0%, #ffe0f0 100%);
+            padding: 40px;
+            border-radius: 20px;
+            margin-top: 30px;
+            text-align: center;
+        }
+
+        .cta-section h3 {
+            color: #b794f6;
+            font-size: 1.8em;
+            margin-bottom: 15px;
+        }
+
+        .cta-section p {
+            font-size: 1.1em;
+            margin-bottom: 20px;
+        }
+
+        .contact-info {
+            background: linear-gradient(135deg, #fff9f0 0%, #f0f9ff 100%);
+            padding: 30px;
+            border-radius: 20px;
+            margin-top: 20px;
+            border: 2px solid #d4b5fc;
+        }
+
+        .contact-info p {
+            margin: 12px 0;
+            font-size: 1.1em;
+        }
+
+        .contact-info a {
+            color: #9f7aea;
+            text-decoration: none;
+            font-weight: 600;
+        }
+
+        .contact-info a:hover {
+            color: #7c5fc7;
+            text-decoration: underline;
+        }
+
+        .footer {
+            background: linear-gradient(135deg, #ffc3d4 0%, #d4b5fc 100%);
+            color: #5a4570;
+            text-align: center;
+            padding: 25px;
+            font-size: 0.95em;
+            font-weight: 500;
+        }
+
+        @media (max-width: 768px) {
+            .header h1 {
+                font-size: 2.2em;
+            }
+            
+            .header .emoji {
+                font-size: 2.5em;
+            }
+            
+            .content {
+                padding: 30px 20px;
+            }
+            
+            .section h2 {
+                font-size: 1.5em;
+            }
+
+            .features {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <div class="emoji">🐾</div>
+            <h1>MedPet</h1>
+            <p>Cuidando do seu melhor amigo</p>
+        </div>
+
+        <div class="content">
+            <div class="section">
+                <h2>Sobre o App</h2>
+                <p>O MedPet é um aplicativo desenvolvido para ajudar tutores de pets a nunca mais esquecerem dos cuidados importantes com seus animais de estimação. Mantenha todas as informações de saúde do seu pet organizadas e receba lembretes no momento certo!</p>
+            </div>
+
+            <div class="section">
+                <h2>Funcionalidades</h2>
+                <div class="features">
+                    <div class="feature-card">
+                        <div class="icon">💉</div>
+                        <h3>Vacinas</h3>
+                        <p>Controle completo do calendário de vacinação com lembretes automáticos para não perder nenhuma dose.</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="icon">💊</div>
+                        <h3>Medicações</h3>
+                        <p>Gerencie horários e dosagens de medicamentos contínuos ou temporários do seu pet.</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="icon">🪱</div>
+                        <h3>Vermífugo</h3>
+                        <p>Acompanhe o cronograma de vermifugação e receba notificações quando chegar a hora.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="section">
+                <div class="cta-section">
+                    <h3>Em Desenvolvimento</h3>
+                    <p>Estamos trabalhando para trazer a melhor experiência de cuidados com pets. Em breve o MedPet estará disponível para download!</p>
+                </div>
+            </div>
+
+            <div class="section">
+                <h2>Contato</h2>
+                <div class="contact-info">
+                    <p><strong>Desenvolvedora:</strong> Gisele F. Gois</p>
+                    <p><strong>Email:</strong> <a href="mailto:contato@giselefgois.com">contato@giselefgois.com</a></p>
+                    <p><strong>GitHub:</strong> <a href="https://github.com/GiseleGois" target="_blank">github.com/GiseleGois</a></p>
+                    <p><strong>Localização:</strong> Campinas, São Paulo, Brasil</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer">
+            <p>🐾 &copy; 2024 MedPet - Todos os direitos reservados</p>
+        </div>
+    </div>
+</body>
+</html>
